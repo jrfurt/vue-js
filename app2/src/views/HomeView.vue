@@ -42,7 +42,13 @@
         <AulaLifecicle v-if="showComponent" />
         <button @click="showComponent = !showComponent">Liga/Desliga</button>
       </div>
-      <AulaPropsEmit />
+      <AulaPropsEmit
+        botao="botão usando props array"
+        botao-dois="
+      botão dois"
+      >
+        Save
+      </AulaPropsEmit>
     </div>
   </div>
 </template>
