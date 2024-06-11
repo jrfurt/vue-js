@@ -44,8 +44,7 @@
       </div>
       <AulaPropsEmit
         botao="botão usando props array"
-        botao-dois="
-      botão dois"
+        botao-dois="botão dois"
         @clicou="clicouGaroto"
       >
         Save
@@ -74,6 +73,7 @@ const fullName = computed(() => {
   return `${name.value.first_name} ${name.value.last_name}`;
 });
 
+// função recebida do emit de AulaPropsEmit.vue
 const clicouGaroto = () => {
   console.log('Clicou, garotinho!');
 };

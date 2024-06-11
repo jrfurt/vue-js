@@ -35,6 +35,7 @@
       <slot />
     </button>
 
+    <!-- usando emit para enviar propriedade ao clicar no botão -->
     <button @click="$emit('clicou')">{{ botaoDois }}</button>
   </div>
 </template>
