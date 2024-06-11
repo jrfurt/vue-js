@@ -46,6 +46,7 @@
         botao="botão usando props array"
         botao-dois="
       botão dois"
+        @clicou="clicouGaroto"
       >
         Save
       </AulaPropsEmit>
@@ -72,6 +73,10 @@ const changeName = () => {
 const fullName = computed(() => {
   return `${name.value.first_name} ${name.value.last_name}`;
 });
+
+const clicouGaroto = () => {
+  console.log('Clicou, garotinho!');
+};
 
 watch(
   name,
