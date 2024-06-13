@@ -45,7 +45,7 @@
       <AulaPropsEmit
         botao="botão usando props array"
         botao-dois="botão dois"
-        @clicou="clicouGaroto"
+        @aumentar-em="fazerContagem"
       >
         Save
       </AulaPropsEmit>
@@ -73,9 +73,12 @@ const fullName = computed(() => {
   return `${name.value.first_name} ${name.value.last_name}`;
 });
 
-// função recebida do emit de AulaPropsEmit.vue
-const clicouGaroto = () => {
-  console.log('Clicou, garotinho!');
+const count = ref(0);
+
+// pegando o parâmetro vindo do $emit()
+const fazerContagem = (n: number) => {
+  count.value += n;
+  console.log(count.value);
 };
 
 watch(
