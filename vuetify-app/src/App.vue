@@ -1,6 +1,30 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="drawer"></v-navigation-drawer>
+    <v-navigation-drawer v-model="drawer">
+      <template v-slot:prepend>
+        <v-list-item
+          lines="two"
+          prepend-avatar="https://randomuser.me/api/portraits/women/81.jpg"
+          subtitle="Logged-in"
+          title="Luís Felipe"
+        ></v-list-item>
+      </template>
+
+      <v-divider />
+
+      <v-list>
+        <v-list-item
+          prepend-icon="mdi-view-dashboard"
+          title="Home"
+          value="home"
+        ></v-list-item>
+        <v-list-item
+          prepend-icon="mdi-forum"
+          title="About"
+          value="about"
+        ></v-list-item>
+      </v-list>
+    </v-navigation-drawer>
     <v-app-bar flat color="blue-grey-lighten-5" class="border-b">
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-app-bar-title>Application</v-app-bar-title>
