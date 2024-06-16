@@ -1,9 +1,13 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="drawer">
+    <v-app-bar flat color="blue-grey-lighten-5" class="border-b">
+      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-title>Application</v-app-bar-title>
+    </v-app-bar>
+    <v-navigation-drawer v-model="drawer" class="bg-blue-grey-lighten-5 elevation-3 border-e">
       <template v-slot:prepend>
         <v-list-item
-          lines="two"
+          lines="three"
           prepend-avatar="https://randomuser.me/api/portraits/women/81.jpg"
           subtitle="Logged-in"
           title="Luís Felipe"
@@ -25,10 +29,7 @@
         ></v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar flat color="blue-grey-lighten-5" class="border-b">
-      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-app-bar-title>Application</v-app-bar-title>
-    </v-app-bar>
+    
     <v-main>
       <CardTeste />
       <HelloWorld />
