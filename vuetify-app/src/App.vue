@@ -32,6 +32,7 @@
     
     <v-main>
       <CardTeste />
+      <CardGrid />
     </v-main>
   </v-app>
 </template>
@@ -39,5 +40,5 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
-const drawer = ref<boolean>(false);
+const drawer = ref<boolean>(true);
 </script>
