@@ -32,7 +32,6 @@
     
     <v-main>
       <CardTeste />
-      <HelloWorld />
     </v-main>
   </v-app>
 </template>
