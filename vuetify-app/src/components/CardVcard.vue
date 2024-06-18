@@ -32,6 +32,8 @@
         <v-card>
           <v-img
             src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+            height="150px"
+            cover
           ></v-img>
           <v-card-title>Flores</v-card-title>
           <v-card-subtitle>Argônias</v-card-subtitle>
