@@ -33,6 +33,7 @@
     <v-main>
       <CardTeste />
       <CardGrid />
+      <CardVcard />
     </v-main>
   </v-app>
 </template>

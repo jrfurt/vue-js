@@ -9,6 +9,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     CardGrid: typeof import('./src/components/CardGrid.vue')['default']
     CardTeste: typeof import('./src/components/CardTeste.vue')['default']
+    CardVcard: typeof import('./src/components/CardVcard.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
