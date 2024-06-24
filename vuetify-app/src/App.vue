@@ -3,8 +3,19 @@
     <v-app-bar flat color="blue-grey-lighten-5" class="border-b">
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-app-bar-title>Application</v-app-bar-title>
+
+      <template #append>
+        <v-btn icon>
+          <v-badge dot color="info">
+            <v-icon icon="mdi-bell"></v-icon>
+          </v-badge>
+        </v-btn>
+      </template>
     </v-app-bar>
-    <v-navigation-drawer v-model="drawer" class="bg-blue-grey-lighten-5 elevation-3 border-e">
+    <v-navigation-drawer
+      v-model="drawer"
+      class="bg-blue-grey-lighten-5 elevation-3 border-e"
+    >
       <template v-slot:prepend>
         <v-list-item
           lines="three"
@@ -29,7 +40,7 @@
         ></v-list-item>
       </v-list>
     </v-navigation-drawer>
-    
+
     <v-main>
       <CardTeste />
       <CardGrid />
