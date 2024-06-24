@@ -10,6 +10,9 @@
             <v-icon icon="mdi-bell"></v-icon>
           </v-badge>
         </v-btn>
+        <v-btn icon>
+          <v-icon icon="mdi-heart"></v-icon>
+        </v-btn>
       </template>
     </v-app-bar>
     <v-navigation-drawer
@@ -51,6 +54,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+import { VBtn, VIcon } from "vuetify/components";
 
 const drawer = ref<boolean>(true);
 </script>
