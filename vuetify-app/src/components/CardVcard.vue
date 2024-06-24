@@ -31,12 +31,14 @@
       <v-col sm="6" lg="4">
         <v-card>
           <v-img
-            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-            height="150px"
+            class="d-flex align-end"
+            height="150"
+            :aspect-ratio="16 / 9"
             cover
-          ></v-img>
-          <v-card-title>Flores</v-card-title>
-          <v-card-subtitle>Argônias</v-card-subtitle>
+            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+          >
+            <v-card-title class="text-white">Flores </v-card-title>
+          </v-img>
 
           <v-card-actions>
             <v-btn color="blue" text="Saiba mais"></v-btn>
