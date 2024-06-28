@@ -10,9 +10,12 @@
             <v-icon icon="mdi-bell"></v-icon>
           </v-badge>
         </v-btn>
-        <v-btn icon @click="isSelected = !isSelected">
-          <v-icon :icon="isSelected ? 'mdi-heart' : 'mdi-heart-outline'"></v-icon>
-        </v-btn>
+        <v-item-group>
+          <v-item v-slot="{ isSelected, toggle }">
+            <v-btn :icon="isSelected ? 'mdi-heart' : 'mdi-heart-outline'" @click="toggle">
+            </v-btn>
+          </v-item>
+        </v-item-group>
       </template>
     </v-app-bar>
     <v-navigation-drawer

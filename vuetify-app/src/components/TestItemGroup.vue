@@ -2,7 +2,7 @@
   <v-item-group selected-class="bg-primary">
     <v-container>
       <v-row>
-        <v-col v-for="n in 3" key="n">
+        <v-col v-for=" in 3" key="n">
           <v-item v-slot="{ isSelected, selectedClass, toggle }">
             <v-card
               :class="['d-flex align-center', selectedClass]"
