@@ -6,12 +6,12 @@
 
       <template #append>
         <v-btn icon>
-          <v-badge dot color="info">
+          <v-badge color="info" :content="2">
             <v-icon icon="mdi-bell"></v-icon>
           </v-badge>
         </v-btn>
-        <v-btn icon>
-          <v-icon icon="mdi-heart"></v-icon>
+        <v-btn icon @click="isSelected = !isSelected">
+          <v-icon :icon="isSelected ? 'mdi-heart' : 'mdi-heart-outline'"></v-icon>
         </v-btn>
       </template>
     </v-app-bar>
@@ -48,6 +48,7 @@
       <CardTeste />
       <CardGrid />
       <CardVcard />
+      <TestItemGroup />
     </v-main>
   </v-app>
 </template>
@@ -57,4 +58,5 @@ import { ref } from "vue";
 import { VBtn, VIcon } from "vuetify/components";
 
 const drawer = ref<boolean>(true);
+const isSelected = ref<boolean>(false);
 </script>
