@@ -41,11 +41,19 @@
           prepend-icon="mdi-view-dashboard"
           title="Home"
           value="home"
+          to="/"
+        ></v-list-item>
+        <v-list-item
+          prepend-icon="mdi-account-multiple"
+          title="Users"
+          value="users"
+          to="/users"
         ></v-list-item>
         <v-list-item
           prepend-icon="mdi-forum"
           title="About"
           value="about"
+          to="/about"
         ></v-list-item>
 
         <v-divider></v-divider>
@@ -69,6 +77,7 @@
     </v-navigation-drawer>
 
     <v-main>
+      <RouterView></RouterView>
       <CardTeste />
       <CardGrid />
       <CardVcard />
@@ -79,7 +88,6 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import { VBtn, VIcon } from "vuetify/components";
 
 const drawer = ref<boolean>(true);
 </script>
