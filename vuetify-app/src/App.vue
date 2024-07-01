@@ -12,7 +12,10 @@
         </v-btn>
         <v-item-group>
           <v-item v-slot="{ isSelected, toggle }">
-            <v-btn :icon="isSelected ? 'mdi-heart' : 'mdi-heart-outline'" @click="toggle">
+            <v-btn
+              :icon="isSelected ? 'mdi-heart' : 'mdi-heart-outline'"
+              @click="toggle"
+            >
             </v-btn>
           </v-item>
         </v-item-group>
@@ -31,7 +34,7 @@
         ></v-list-item>
       </template>
 
-      <v-divider />
+      <v-divider></v-divider>
 
       <v-list>
         <v-list-item
@@ -44,6 +47,24 @@
           title="About"
           value="about"
         ></v-list-item>
+
+        <v-divider></v-divider>
+
+        <v-list-group value="Contact">
+          <template v-slot:activator="{ props }">
+            <v-list-item
+              v-bind="props"
+              prepend-icon="mdi-account-circle"
+              title="Contact"
+            ></v-list-item>
+          </template>
+
+          <v-list-item
+            v-for="n in 2"
+            prepend-icon="mdi-account"
+            :key="n"
+          >{{ 'Contact ' + n }}</v-list-item>
+        </v-list-group>
       </v-list>
     </v-navigation-drawer>
 
@@ -61,5 +82,4 @@ import { ref } from "vue";
 import { VBtn, VIcon } from "vuetify/components";
 
 const drawer = ref<boolean>(true);
-const isSelected = ref<boolean>(false);
 </script>
