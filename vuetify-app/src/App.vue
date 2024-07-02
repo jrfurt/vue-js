@@ -78,10 +78,6 @@
 
     <v-main>
       <RouterView></RouterView>
-      <CardTeste />
-      <CardGrid />
-      <CardVcard />
-      <TestItemGroup />
     </v-main>
   </v-app>
 </template>
