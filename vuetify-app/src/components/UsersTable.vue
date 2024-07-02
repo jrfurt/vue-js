@@ -1,5 +1,6 @@
 <template>
   <v-card>
+    <v-card-title> Users </v-card-title>
     <v-table>
       <thead>
         <tr>
@@ -13,12 +14,25 @@
           <td>{{ user.name }}</td>
           <td>{{ user.email }}</td>
           <td>
-            <v-btn icon="mdi-pencil" variant="tonal" color="primary" size="small"></v-btn>
+            <v-btn
+              icon="mdi-pencil"
+              variant="tonal"
+              color="primary"
+              size="small"
+            ></v-btn>
           </td>
         </tr>
       </tbody>
     </v-table>
   </v-card>
+  <v-fab
+    class="me-4 mt-7"
+    prepend-icon="mdi-plus"
+    extended
+    text="Add User"
+    absolute
+    offset
+  ></v-fab>
 </template>
 
 <script setup lang="ts">
