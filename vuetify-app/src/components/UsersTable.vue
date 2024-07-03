@@ -15,9 +15,17 @@
           <td>{{ user.email }}</td>
           <td>
             <v-btn
+              class="me-2"
               icon="mdi-pencil"
-              variant="tonal"
+              variant="text"
               color="primary"
+              size="small"
+            ></v-btn>
+
+            <v-btn
+              icon="mdi-delete"
+              variant="tonal"
+              color="error"
               size="small"
             ></v-btn>
           </td>
@@ -26,10 +34,11 @@
     </v-table>
   </v-card>
   <v-fab
-    class="me-4 mt-7"
+    class="mt-7"
     prepend-icon="mdi-plus"
     extended
     text="Add User"
+    color="info"
     absolute
     offset
   ></v-fab>
