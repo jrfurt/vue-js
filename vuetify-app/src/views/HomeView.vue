@@ -5,12 +5,15 @@
     <CardGrid />
     <CardVcard />
     <TestItemGroup />
+    <h2>{{ numberClick }}</h2>
     <v-row>
       <CardComProps
         v-for="post in posts"
         :key="post.id"
         :title="post.title"
         :text="post.text"
+        @clicouMais="numberClick++"
+        @clicouMenos="numberClick--"
       />
     </v-row>
   </v-container>
@@ -18,6 +21,8 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+
+let numberClick = ref(0);
 
 const posts = ref([
   {
