@@ -48,11 +48,7 @@
   ></v-fab>
 
   <v-dialog v-model="openDialogAddUser" max-width="500">
-    <v-card title="Add User">
-      <v-card-text>
-        Dialog to ADD a new user
-      </v-card-text>
-    </v-card>
+    <CadastroUser />
   </v-dialog>
 
   <v-dialog v-model="openDialogEditUser" max-width="500">
@@ -74,6 +70,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+import CadastroUser from "./CadastroUser.vue";
 
 const openDialogAddUser = ref<boolean>(false);
 const openDialogEditUser = ref<boolean>(false);

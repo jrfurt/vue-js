@@ -7,6 +7,7 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    CadastroUser: typeof import('./src/components/CadastroUser.vue')['default']
     CardComProps: typeof import('./src/components/CardComProps.vue')['default']
     CardGrid: typeof import('./src/components/CardGrid.vue')['default']
     CardTeste: typeof import('./src/components/CardTeste.vue')['default']
