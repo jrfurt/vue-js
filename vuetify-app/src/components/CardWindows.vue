@@ -1,12 +1,12 @@
 <template>
   <v-card max-width="500" class="mx-auto">
     <v-card-title class="text-h6 font-weight-regular">
-     <span>{{ title }}</span> 
-     <v-avatar
-      size="24"
-      color="primary"
-      v-text="window"
-     ></v-avatar>
+      <span>{{ title }}</span>
+      <v-avatar 
+        size="24" 
+        color="primary" 
+        v-text="window"
+      ></v-avatar>
     </v-card-title>
     <v-window v-model="window">
       <v-window-item :value="1">
@@ -20,31 +20,36 @@
           <v-text-field label="Confirme a Senha"></v-text-field>
         </v-card-text>
       </v-window-item>
-
-      <v-divider></v-divider>
-
-      <v-card-actions>
-        <v-btn
-          color="primary"
-          variant="text"
-          v-if="window > 1"
-          @click="window--"
-        >
-          Voltar
-        </v-btn>
-
-        <v-spacer></v-spacer>
-
-        <v-btn
-          color="primary"
-          variant="flat"
-          @click="window++"
-          v-if="window < 3"
-        >
-          {{ window === 2 ? "Enviar" : "Próx." }}
-        </v-btn>
-      </v-card-actions>
+      <v-window-item :value="3">
+        <v-card-text>
+          Parabéns, sua conta foi criada!
+        </v-card-text>
+      </v-window-item>
     </v-window>
+
+    <v-divider></v-divider>
+
+    <v-card-actions>
+      <v-btn 
+        color="primary" 
+        variant="text" 
+        v-if="window > 1" 
+        @click="window--"
+      >
+        Voltar
+      </v-btn>
+
+      <v-spacer></v-spacer>
+
+      <v-btn 
+        color="primary" 
+        variant="flat" 
+        @click="window++" 
+        v-if="window < 3"
+      >
+        {{ window === 2 ? "Enviar" : "Próx." }}
+      </v-btn>
+    </v-card-actions>
   </v-card>
 </template>
 
